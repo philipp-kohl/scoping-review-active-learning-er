@@ -1,0 +1,107 @@
+﻿#	Name	Exploration/Exploitation	Specification	Heuristic	Proposed by	Used by	Tested on datasets	Tested in Medicine	Tested in Biomedicine	Tested in Newscorpora
+1	Least Confidence (LC) (also called Viterbi sequence \\cite{sapci_focusing_2023}; similar to Token Probability (\\cite{sapci_focusing_2023}))	Exploitation	Uncertainty-based Sampling	LC		liu_ltp_2022, mendonca_query_2020, yao_looking_2020, shrivastava_iseql_2020, agrawal_active_2021, chen_active_2017, kholghi_external_2015, shen_deep_2018, chen_study_2015, simpson_bayesian_2019, claveau_strategies_2018, tomanek_annotation_2010, ni_fast_2015, sapci_focusing_2023, agrawal_multicore_2023, culotta_corrective_2006, culotta_reducing_2005, zheng_opentag_2018, shelmanov_active_2021, shen_deep_2017	CoNLL 2003 English, Ritter, Paramopama, Second HAREM, CoNLL 2003 English, CoNLL 2002 Dutch, CoNLL 2002 Spanish, CADEC, JNLPBA, NCBI-Disease, BC5CDR, i2b2/VA 2010, ShARe/CLEF 2013, OntoNotes-5.0 English, PICO, ARG, ESTER campaign, MUC7, CoNLL 2003 NER English, Medical Reports from 2 institutions, BioCreative 1A Gene mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE, NCBI-Disease, BC5CDR, BioNLP13 Cancer Genetics, Websites & Emails Corpus, Amazon Product Profiles	Yes	Yes	Yes
+2	Top K LC	Exploitation	Uncertainty-based Sampling	LC		agrawal_active_2021	JNLPBA, NCBI-Disease, BC5CDR	No	Yes	No
+3	LC with Normalization on Standard Deviation	Exploitation	Uncertainty-based Sampling	LC	claveau_strategies_2018		ESTER Campaign	No	No	No
+4	Maximum LC (MMC, also referred to as Single Most Uncertain by \\cite{sapci_focusing_2023} and Minimum Token Probability (MTP) by \\cite{liu_ltp_2022})	Exploitation	Uncertainty-based Sampling	LC	esuli_sentence-based_2010	sapci_focusing_2023, liu_ltp_2022, li_ud_bbc_2022	CoNLL2003 English, CoNLL 2002 Dutch, CoNLL 2002 Spanish, Ritter, WNUT2016	No	No	Yes
+5	Lowest Token Probability (LTP)	Exploitation	Uncertainty-based Sampling	LC	liu_ltp_2022		CoNLL2003 English NER, Ritter	No	No	Yes
+6	Average Normalized LC (MAC)	Exploitation	Uncertainty-based Sampling	LC	esuli_sentence-based_2010	sapci_focusing_2023	CoNLL2003 English, CoNLL 2002 Dutch, CoNLL 2002 Spanish	No	No	Yes
+7	Total Sum (Total)	Exploitation	Uncertainty-based Sampling	LC		sapci_focusing_2023, linh_loss-based_2021	CoNLL 2003 English, CoNLL 2002 Dutch, CoNLL 2002 Spanish, i2b2/VA 2010, ShARe/CLEF 2013	Yes	No	Yes
+8	Minimum LC (MMS for Max Max Score (concerning Token Probability))	Exploitation	Uncertainty-based Sampling	LC	esuli_sentence-based_2010		CoNLL2003 English NER	No	No	Yes
+9	Minimum Average LC (MAS)	Exploitation	Uncertainty-based Sampling	LC	esuli_sentence-based_2010		CoNLL2003 English NER	No	No	Yes
+10	Entropy	Exploitation	Uncertainty-based Sampling	Entropy	settles_analysis_2008	yao_looking_2020, sapci_focusing_2023, tang_towards_2022, kholghi_external_2015, agrawal_active_2021, shardlow_text_2019, han_clustering_2016, chen_study_2015, tchoua_active_2019, claveau_strategies_2018, nguyen_active_2013	CoNLL 2003 English, CoNLL 2002 Spanish, CoNLL 2002 Dutch, BC5CDR, RSMeans Online, i2b2/VA 2010, ShARe/CLEF 2013, JNLPBA, NCBI-Disease, COR, BioCreative II, Articles found on Macromolecules, ESTER campaign, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE	Yes	Yes	Yes
+11	Normalized K-Best Sequence Entropy	Exploitation	Uncertainty-based Sampling	Entropy		shardlow_text_2019,kim_mmr-based_2006,li_iekm-md_2020, chen_study_2015	i2b2/VA 2010, JNLPBA, AI Conferences Abstracts, FTD	Yes	Yes	No
+12	Normalized Entropy on instance level	Exploitation	Uncertainty-based Sampling	Entropy		shardlow_text_2019	COR	No	No	No
+13	Dynamic K-Best Sequence Entropy	Exploitation	Uncertainty-based Sampling	Entropy	settles_analysis_2008	chen_study_2015	i2b2/VA 2010, CoNLL 2003, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE	Yes	Yes	Yes
+14	Entity Entropy	Exploitation	Uncertainty-based Sampling	Entropy		chen_study_2015	i2b2/VA 2010	Yes	No	No
+15	Total Token Entropy (TTE)	Exploitation	Uncertainty-based Sampling	Entropy	settles_analysis_2008	sapci_focusing_2023	CoNLL 2003 English NER, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE, BC5CDR	No	Yes	Yes
+16	Maximum Entropy	Exploitation	Uncertainty-based Sampling	Entropy		sapci_focusing_2023	CoNLL 2003 English NER, BC5CDR	No	Yes	Yes
+17	Sequence Entropy	Exploitation	Uncertainty-based Sampling	Entropy	settles_analysis_2008		CoNLL 2003, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE	No	Yes	Yes
+18	K Best Sequence Entropy	Exploitation	Uncertainty-based Sampling	Entropy	settles_analysis_2008		CoNLL 2003, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE	No	Yes	Yes
+19	Maximum Normalized Log-Probability (MNLP)	Exploitation	Uncertainty-based Sampling	Other		pradhan_knowledge_2020, li_ud_bbc_2022, linh_loss-based_2021, shen_deep_2018, siddhant_deep_2018, chang_using_2020, zhou_active_2023, lin_alpacatag_2019, van_nguyen_famie_2022, li_iekm-md_2020, shelmanov_active_2019, tsvigun_altoolbox_2022, shelmanov_active_2021, moniz_efficiently_2022, shen_deep_2017	NCBI Disease, MedMentions, CoNLL 2003 English, CoNLL 2002 Dutch, CoNLL 2002 Spanish, OntoNotes 5.0 English, ShARe/CLEF 2013, i2b2/VA, WNUT2016, NVD, CAPEC, Fault Disposal Plans, AI confernce papers, FTD, JNLPBA, i2b2/UTHealth 2014	Yes	Yes	Yes
+20	Modified MNLP	Exploitation	Uncertainty-based Sampling	Other	shelmanov_active_2019		i2b2/UTHealth 2014 , JNLPBA	Yes	Yes	No
+21	Minimal Margin	Exploitation	Uncertainty-based Sampling	Margin	settles_analysis_2008	sapci_focusing_2023, skeppstedt_visualising_2019, agrawal_active_2020, verma_ensemble_2013, saha_active_2012, miller_name_2004	CoNLL 2003 English, BC5CDR, Broad Twitter Corpus, DISAE, i2b2/VA 2010, JNLPBA, NCBI-Disease, BC5CDR, CoNLL 2002 Spanish, JNLPBA, MUC-6, Wall Street Journal Treebank Corpus, CoNLL 2003 English, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE, GENIA	Yes	Yes	Yes
+22	Minimal Margin on Instance Level	Exploitation	Uncertainty-based Sampling	Margin		chen_study_2015, kholghi_external_2015	i2b2/VA 2010, ShARe/CLEF 2013	Yes	No	No
+23	Average Margin	Exploitation	Uncertainty-based Sampling	Margin	sapci_focusing_2023	mejer_confidence_2010, tomanek_proper_2009, laws_active_2011	CoNLL 2003 English NER, CoNLL 2002 Spanish, CoNLL 2002 Dutch, CoNLL 2000 English, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE, BC5CDR, PennBioIE	No	Yes	Yes
+24	Total Sum Margin	Exploitation	Uncertainty-based Sampling	Margin	sapci_focusing_2023		CoNLL 2003 English NER, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE, BC5CDR	No	Yes	Yes
+25	Max Number of NEs (Max Tag Count MTC)	Exploitation	Uncertainty-based Sampling	Count	esuli_sentence-based_2010		CoNLL2003 English	No	No	Yes
+26	Max Tag Ratio (MTR)	Exploitation	Uncertainty-based Sampling	Count	esuli_sentence-based_2010		CoNLL2003 English	No	No	Yes
+27	Medium Tag Ratio (MedTR)	Exploitation	Uncertainty-based Sampling	Count	esuli_sentence-based_2010		CoNLL2003 English	No	No	Yes
+28	Max LC Sentences	Exploitation	Uncertainty-based Sampling	Count	ni_fast_2015		Medical Reports from 2 institutions	Yes	No	No
+29	Round Robin Max Entity Separated (RRMS)	Exploitation	Uncertainty-based Sampling	RoundRobin	esuli_sentence-based_2010		CoNLL2003 English NER	No	No	Yes
+30	Round Robin Average Entity Separated (RRAS)	Exploitation	Uncertainty-based Sampling	RoundRobin	esuli_sentence-based_2010		CoNLL2003 English NER	No	No	Yes
+31	Round Robin Entity-separated Strategy (RRMTR)	Exploitation	Uncertainty-based Sampling	RoundRobin	esuli_sentence-based_2010		CoNLL2003 English	No	No	Yes
+32	Weighted Sum of Historical Sequence with LC (WSHS-LC)	Exploitation	Uncertainty-based Sampling	LC	yao_looking_2020		CoNLL-2003 English, CoNLL-2002 Dutch, CoNLL-2002 Spanish	No	No	Yes
+33	Weighted Sum of Historical Sequence with BALD (WSHS-BALD)	Exploitation	Uncertainty-based Sampling	Other	yao_looking_2020		CoNLL-2003 English, CoNLL-2002 Dutch, CoNLL-2002 Spanish	No	No	Yes
+34	Weighted Sum of Historical Sequence with MNLP (WSHS-MNLP)	Exploitation	Uncertainty-based Sampling	Other	yao_looking_2020		CoNLL-2003 English, CoNLL-2002 Dutch, CoNLL-2002 Spanish	No	No	Yes
+35	Fluctuation of Historical Sequence (FHS)	Exploitation	Uncertainty-based Sampling	LC	yao_looking_2020		CoNLL-2003 English, CoNLL-2002 Dutch, CoNLL-2002 Spanish	No	No	Yes
+36	Tag Flip with Historical Sequence	Exploitation	Uncertainty-based Sampling	Other	zheng_opentag_2018		Amazon Product Profiles	No	No	No
+37	K-Draws by Parameters Confidence (KD-PC)	Exploitation	Performance Prediction		mejer_confidence_2010		CoNLL 2003 English NER, CoNLL 2002 Spanish, CoNLL 2002 Dutch, CoNLL 2000 English	No	No	Yes
+38	K Draws by Fixed Standard Deviation (KD-Fixed)	Exploitation	Performance Prediction		mejer_confidence_2010		CoNLL 2003 English NER, CoNLL 2002 Spanish, CoNLL 2002 Dutch, CoNLL 2000 English	No	No	Yes
+39	Confidence Margin	Exploitation	Performance Prediction		mejer_confidence_2010		CoNLL 2003 English NER, CoNLL 2002 Spanish, CoNLL 2002 Dutch, CoNLL 2000 English	No	No	Yes
+40	Bayesian AL by Disagreement (BALD)	Exploitation	Disagreement	BALD		yao_looking_2020, shen_deep_2018, siddhant_deep_2018, shelmanov_active_2021, chang_using_2020, shen_deep_2017	NCBI Disease, MedMentions, CoNLL 2003 English, CoNLL 2002 Dutch, CoNLL 2002 Spanish, OntoNotes-5.0 English	Yes	No	Yes
+41	BALD with Bayes by Backprop	Exploitation	Disagreement	BALD	siddhant_deep_2018		CoNLL 2003 English, OntoNotes-5.0 English	No	No	Yes
+42	Vote entropy	Exploitation	Disagreement	Vote Entropy		hahn_active_2012, tomanek_reducing_2009, olsson_intrinsic_2009, settles_analysis_2008, culotta_corrective_2006	PATHOJEN corpus, PennBioIE corpus, GeneReg corpus, CoNLL 2003 English, MUC-7, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE, Websites & Emails Corpus	Yes	Yes	Yes
+43	Adapted Vote Entropy for Imbalanced Datasets with Boosted Disagreement (BOOD)	Exploitation	Disagreement	Vote Entropy	tomanek_reducing_2009		PennBioIE corpus, GeneReg corpus	No	Yes	No
+44	Adapted Vote Entropy for Imbalanced Datasets with Balanced-Batches (BAB)	Exploitation	Disagreement	Vote Entropy	tomanek_reducing_2009		PennBioIE corpus, GeneReg corpus	No	Yes	No
+45	Adapted Vote Entropy for Imbalanced Datasets with Minority-Class Focus (MINOR)	Exploitation	Disagreement	Vote Entropy	tomanek_reducing_2009		PennBioIE corpus, GeneReg corpus	No	Yes	No
+46	Adapted Vote Entropy for Imbalanced Datasets with Oversampling (OVER)	Exploitation	Disagreement	Vote Entropy	tomanek_reducing_2009		PennBioIE corpus, GeneReg corpus	No	Yes	No
+47	Committee generation via Query By Boosting/ActiveDecorate/Co-testing	Exploitation	Disagreement	Vote Entropy	olsson_privacy_2009		MUC-7 Air Crashes	No	No	No
+48	Sequence Vote Entropy	Exploitation	Disagreement	Vote Entropy	settles_analysis_2008		CoNLL 2003 English, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE	No	Yes	Yes
+49	Kullback-Leibler Disagreement	Exploitation	Disagreement	KL	settles_analysis_2008		CoNLL 2003 English, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE	No	Yes	Yes
+50	Sequence Kullback-Leibler (SKL)	Exploitation	Disagreement	KL	settles_analysis_2008		CoNLL 2003 English, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE	No	Yes	Yes
+51	Kullback-Leibler Divergence (token-based + mean / max)	Exploitation	Disagreement	KL	hachey_investigating_2005		Astronomy Bootstrapping Corpus	No	No	No
+52	F-Komplement	Exploitation	Disagreement	Other	hachey_investigating_2005		Astronomy Bootstrapping Corpus	No	No	No
+53	Approximating Validation Set Agreement Curve (VSA)	Exploitation	Disagreement	Vote Entropy	tomanek_approximating_2008		CoNLL 2003 English NER, PBvar Corpus, CytoRec, CDAntigen	No	Yes	Yes
+54	Error decay on groups (EDG)	Exploitation	Performance Prediction	Error Decay	chang_using_2020		CoNLL-2003 NER English, NCBI Disease, MedMentions	Yes	Yes	Yes
+55	Approximation of error decay with prediction changes (EDG_ext1)	Exploitation	Performance Prediction	Error Decay	chang_using_2020		CoNLL-2003 NER English, NCBI Disease, MedMentions	Yes	Yes	Yes
+56	Model uncertainty reduction of each sample (EDG_ext2)	Exploitation	Performance Prediction	Error Decay	chang_using_2020		CoNLL-2003 NER English, NCBI Disease, MedMentions	Yes	Yes	Yes
+57	Maximum Gibbs Error	Exploitation	Performance Prediction	Error Decay		han_clustering_2016, nguyen_active_2013	BioCreative II, CoNLL 2003 English NER	No	Yes	Yes
+58	Loss-based Method	Exploitation	Performance Prediction	Error Decay	linh_loss-based_2021		i2b2/VA 2010 NLP, ShARe/CLEF 2013, CoNLL 2003	Yes	No	Yes
+59	Expected Gradient Length (EGL)	Exploitation	Performance Prediction	Other	settles_analysis_2008		CoNLL 2003 English, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE	No	Yes	Yes
+60	Fisher Information Ratio (FIR)	Exploitation	Variance Reduction	Other	settles_analysis_2008		CoNLL 2003 English, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE	No	Yes	Yes
+61	Context similarity	Exploration	Discriminative			li_ud_bbc_2022	CoNLL-2003, WNUT 16	No	No	Yes
+62	Exploration-Guided AL with Jaccard-Similarity (EGAL-Jac)	Exploration	Discriminative, Density			mendonca_query_2020	Paramopama, Second HAREM	No	No	No
+63	Exploration-Guided AL with cosine distance of contextual embedding of sentences (EGAL-BERT)	Exploration	Discriminative, Density			mendonca_query_2020	Paramopama, Second HAREM	No	No	No
+64	k-Nearest Neighbor Approach (kNN)	Exploration	Density			shrivastava_iseql_2020	CoNLL 2003 English, CADEC	No	No	Yes
+65	Diversity (Div)	Exploration	Discriminative			chang_using_2020, chen_study_2015	NCBI Disease, MedMentions, i2b2/VA 2010	Yes	Yes	No
+66	Syntactic Diversity (Div)	Exploration	Discriminative		chen_study_2015		i2b2/VA 2010	Yes	No	No
+67	Semantic Diversity (Div)	Exploration	Discriminative		chen_study_2015		i2b2/VA 2010	Yes	No	No
+68	Word and Syntactic and Semantic Diversity (Div)	Exploration	Discriminative		chen_study_2015		i2b2/VA 2010	Yes	No	No
+69	Maximum Representativeness-Diversity (MRD)	Exploration	Discriminative, Density		kholghi_external_2015		i2b2/VA 2010, ShARe/CLEF 2013	Yes	No	No
+70	Clustering-based AL	Exploration	Density		han_clustering_2016		BioCreative II	No	Yes	No
+71	Density	Exploration	Density			han_clustering_2016	BioCreative II	No	Yes	No
+72	Slotting	Exploration	Density		zhou_active_2023		Fault Disposal Plans	No	No	No
+73	Proportion	Exploration	Density		claveau_strategies_2018		ESTER campaign, CoNLL2002 Dutch, CoNLL 2000 English	No	No	Yes
+74	K Means Cluster Centroids (BERT-KM)	Exploration	Density			van_nguyen_famie_2022	CoNLL2003 English NER, CoNLL2002 Spanish	No	No	Yes
+75	Submodular Combination	Hybrid	Uncertainty-based Sampling, Discriminative	Combined	shen_deep_2018	chang_using_2020	OntoNotes-5.0 English, NCBI Disease, MedMentions	Yes	Yes	No
+76	Maximal Marginal Relevance (MMR)	Hybrid	Uncertainty-based Sampling, Density	Combined	kim_mmr-based_2006		JNLPBA	No	Yes	No
+77	Normalized MMR	Hybrid	Uncertainty-based Sampling, Density	Combined	kim_mmr-based_2006		JNLPBA	No	Yes	No
+78	BADGE	Hybrid	Uncertainty-based Sampling, Density	Sequentially		van_nguyen_famie_2022	CoNLL2003 English NER, CoNLL2002 Spanish	No	No	Yes
+79	K Test Neighbor Selection	Hybrid	Uncertainty-based Sampling, Density	Sequentially	linh_loss-based_2021		i2b2/VA 2010 NLP, ShARe/CLEF 2013, CoNLL 2003	Yes	No	Yes
+80	Maximum of K Test Neighbors and Loss Prediction (AKL)	Hybrid	Uncertainty-based Sampling, Density	Combined	linh_loss-based_2021		i2b2/VA 2010 NLP, ShARe/CLEF 2013, CoNLL 2003	Yes	No	Yes
+81	Clustering and Representation Learning Sampling with Unsupervised Least Confidence (ULC)	Hybrid	Uncertainty-based Sampling, Density	Sequentially	kholghi_clinical_2017		i2b2/VA 2010, ShARe/CLEF 2013	Yes	No	No
+82	Clustering and Representation Learning Sampling with Unsupervised Information Diversity (UID)	Hybrid	Uncertainty-based Sampling, Discriminative	Sequentially	kholghi_clinical_2017		i2b2/VA 2010, ShARe/CLEF 2013	Yes	No	No
+83	Two-level Unsupervised Information Diversity (2L-UID)	Hybrid	Uncertainty-based Sampling, Discriminative	Sequentially	kholghi_clinical_2017		i2b2/VA 2010, ShARe/CLEF 2013	Yes	No	No
+84	Clustering And Uncertainty Sampling Engine (CAUSE) (MUCS)	Hybrid	Uncertainty-based Sampling, Density	Sequentially	chen_active_2017		i2b2/VA 2010	Yes	No	No
+85	Average Uncertainty Cluster Sampling (AUCS)	Hybrid	Uncertainty-based Sampling, Density	Sequentially	chen_active_2017		i2b2/VA 2010	Yes	No	No
+86	Random Cluster Sampling (RCS)	Hybrid	Uncertainty-based Sampling, Density	Sequentially	chen_active_2017		i2b2/VA 2010	Yes	No	No
+87	Cost-aware Sampling (Cost-CAUSE)	Hybrid	Uncertainty-based Sampling, Density	Sequentially	wei_cost-aware_2019		i2b2/VA 2010	Yes	No	No
+88	Information Density with Jaccard-Similarity (IDen-Jac by Mendonca)	Hybrid	Uncertainty-based Sampling, Density	Combined	settles_analysis_2008	mendonca_query_2020, claveau_strategies_2018	Paramopama, Second HAREM, i2b2/VA 2010, ShARe/CLEF 2013, ESTER campaign, CoNLL2002 Dutch, CoNLL 2000 English, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE	Yes	Yes	Yes
+89	Information Density with cosine distance (IDen-BERT by Mendonca)	Hybrid	Uncertainty-based Sampling, Density	Combined	settles_analysis_2008	mendonca_query_2020, claveau_strategies_2018	Paramopama, Second HAREM, i2b2/VA 2010, ShARe/CLEF 2013, ESTER campaign, CoNLL2002 Dutch, CoNLL 2000 English, JNLPBA, BioCreative 1A Gene Mentions, FlySlip, CORA:Headers, CORA:References, Sig+Reply, SigIE	Yes	Yes	Yes
+90	Information Diversity	Hybrid	Uncertainty-based Sampling, Discriminative	Combined	kholghi_external_2015		i2b2/VA 2010, ShARe/CLEF 2013	Yes	No	No
+91	Information Density and Diversity	Hybrid	Uncertainty-based Sampling, Discriminative, Density	Combined	kholghi_external_2015		i2b2/VA 2010, ShARe/CLEF 2013	Yes	No	No
+92	Uncertainty-based Sampling with Distance Ranking (Distance UBS)	Hybrid	Uncertainty-based Sampling, Discriminative, Density	Sequentially	tchoua_active_2019		Articles found on Macromolecules (Journal in Polymer Science)	No	No	No
+93	MNLP with Slotting	Hybrid	Uncertainty-based Sampling, Density	Sequentially	zhou_active_2023		Fault Disposal Plans	No	No	No
+94	Weighted pointwise mutual information (WPMI) with K-means Clustering	Hybrid	Disagreement, Discriminative	Sequentially	gao_active_2019		IT Help&Support	No	No	No
+95	Information Entropy followed by K-Means Clustering	Hybrid	Uncertainty-based Sampling, Density	Sequentially	veerasekharreddy_named_2022		EMR	Yes	No	No
+96	Uncertain, representative & diverse Samples	Hybrid	Uncertainty-based Sampling, Density, Batch Diversity	Sequentially, Combined		brent_systematic_2009	CoNLL2003 NER English	No	No	Yes
+97	Positive Token Biased Querying with Total Positive Sum of LC (total-pos_LC)	Hybrid	Uncertainty-based Sampling, Discriminative	Sequentially	sapci_focusing_2023		CoNLL-2003, BC5CDR, NCBI-Disease	No	Yes	Yes
+98	Positive Token Biased Querying with Total Positive Sum of Token Entropy (total-pos_Entropy)	Hybrid	Uncertainty-based Sampling, Discriminative	Sequentially	sapci_focusing_2023		CoNLL-2003, BC5CDR, NCBI-Disease	No	Yes	Yes
+99	Positive Token Biased Querying with Total Positive Assignment Probability (total-pos_seqLC)	Hybrid	Uncertainty-based Sampling, Discriminative	Sequentially	sapci_focusing_2023		CoNLL-2003, BC5CDR, NCBI-Disease	No	Yes	Yes
+100	Positive Token Biased Querying with Total Positive Sum Margin (total-pos_Margin)	Hybrid	Uncertainty-based Sampling, Discriminative	Sequentially	sapci_focusing_2023		CoNLL-2003, BC5CDR, NCBI-Disease	No	Yes	Yes
+101	Positive Token Biased Querying with Density Normalized Positive Sum (dnorm-pos)	Hybrid	Uncertainty-based Sampling, Discriminative	Sequentially	sapci_focusing_2023		CoNLL-2003, BC5CDR, NCBI-Disease	No	Yes	Yes
+102	Positive Token Biased Querying with Density Normalized Positive Sum (dnorm-pos)	Hybrid	Uncertainty-based Sampling, Discriminative	Sequentially	sapci_focusing_2023		CoNLL-2003, BC5CDR, NCBI-Disease	No	Yes	Yes
+103	Positive Token Biased Querying with Density Normalized Positive Sum (dnorm-pos)	Hybrid	Uncertainty-based Sampling, Discriminative	Sequentially	sapci_focusing_2023		CoNLL-2003, BC5CDR, NCBI-Disease	No	Yes	Yes
+104	Positive Token Biased Querying with Density Normalized Positive Sum (dnorm-pos)	Hybrid	Uncertainty-based Sampling, Discriminative	Sequentially	sapci_focusing_2023		CoNLL-2003, BC5CDR, NCBI-Disease	No	Yes	Yes
+105	Domain Knowledge-Informativeness (DKI)	Hybrid	Uncertainty-based Sampling, Other (select Concept that occur often in annotated training set and the whole corpus)	Combined	kholghi_external_2015		i2b2/VA 2010, ShARe/CLEF 2013	Yes	No	No
+106	Total Token-Based DKI	Hybrid	Uncertainty-based Sampling, Other (select concepts that occur often in annotated training set and the whole corpus)	Combined	kholghi_external_2015		i2b2/VA 2010, ShARe/CLEF 2013	Yes	No	No
