@@ -36,7 +36,7 @@
 35	FranText Corpus	Prose	French	erdmann_practical_2019	No								Excluded
 36	Articles found on Macromolecules (Journal in Polymer Science)	Chemistry	English	tchoua_active_2019	No								Excluded
 37	ESTER-campaign	Radio broadcasts	French	claveau_strategies_2018	No								Excluded
-38	PATHOJEN corpus (MEDLINE 2011 baseline with query "(“Disease”[MeSH Terms] AND hasabstract[All Fields])"	Medicine	English	hahn_active_2012	No								Excluded
+38	PATHOJEN corpus (MEDLINE 2011 baseline with query (Disease [MeSH Terms] AND hasabstract[All Fields])	Medicine	English	hahn_active_2012	No								Excluded
 39	PennBioIE Corpus (PubMed abstracts)	Biomedicine	English	tomanek_reducing_2009, tomanek_proper_2009	No								Excluded
 40	Message Understanding Conference (MUC7)	Newspaper articles	English	tomanek_annotation_2010, olsson_privacy_2009	No								Excluded
 41	Medical Reports from 2 institutions	Medicine	English	ni_fast_2015	No								Excluded
