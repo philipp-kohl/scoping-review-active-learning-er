@@ -25,36 +25,36 @@
 24	SigIE	Email messages	English	251 samples	309206 tokens	3	name, email, phone	settles_analysis_2008	https://pages.cs.wisc.edu/~bsettles/data/	""	'Feel free to use them in your own work, and be sure to cite the papers listed in README files, if appropriate' cited from website	Yes	Included
 25	FTD	Scientific Papers	English	461 samples	12258 tokens	3	focus, technique, domain	li_iekm-md_2020	https://nlp.stanford.edu/pubs/FTDDataset_v1.txt	https://aclanthology.org/I11-1001.pdf original link broken	"Research purpose: 'The dataset is available at http://cs.stanford.
 edu/people/sonal/fta for the research community.'"	Yes	Included
-26	CoNLL 2003 German	Newspaper articles	German	moniz_efficiently_2022	No								Excluded
-27	BioCreative V CDR (BC5CDR)	Biomedicine	English	sapci_focusing_2023, agrawal_multicore_2023, agrawal_active_2021	-								Excluded
-28	BioCreative 1A Gene mentions	Biomedicine	English	settles_analysis_2008	No								Excluded
-29	BioCreative II	Biomedicine	English	han_clustering_2016	No								Excluded
-30	BioNLP13 Cancer Genetics (CG)	Biomedicine	English	agrawal_multicore_2023	-								Excluded
-31	i2b2/VA 2010 NLP	Medicine	English	yu_adversarial_2020, linh_loss_2021, kholghi_clinical_2017, wei_cost-aware_2019, kholgi_external_2015, chen_active_2017, chen_study_2015	No								Excluded
-32	RSMeans Online	Construction (work descriptions)	English	tang_towards_2022	No								Excluded
-33	Semeval 2018 Task 8	Cybersecurity	English	li_adversarial_2021	No								Excluded
-34	ShARe/CLEF 2013	Medicine	English	linh_loss_2021, kholgi_clinical_2017, kholghi_external_2015	No								Excluded
-35	FranText Corpus	Prose	French	erdmann_practical_2019	No								Excluded
-36	Articles found on Macromolecules (Journal in Polymer Science)	Chemistry	English	tchoua_active_2019	No								Excluded
-37	ESTER-campaign	Radio broadcasts	French	claveau_strategies_2018	No								Excluded
-38	PATHOJEN corpus (MEDLINE 2011 baseline with query (Disease [MeSH Terms] AND hasabstract[All Fields])	Medicine	English	hahn_active_2012	No								Excluded
-39	PennBioIE Corpus (PubMed abstracts)	Biomedicine	English	tomanek_reducing_2009, tomanek_proper_2009	No								Excluded
-40	Message Understanding Conference (MUC7)	Newspaper articles	English	tomanek_annotation_2010, olsson_privacy_2009	No								Excluded
-41	Medical Reports from 2 institutions	Medicine	English	ni_fast_2015	No								Excluded
-42	Wall Street Journal Treebank Corpus (Section 02-23, self-annotated)	Newspaper articles	English	miller_name_2004	No								Excluded
-43	Astronomy Bootstrapping Corpus (ABC)	Radio astronomical papers	English	hachey_investigating_2005	No								Excluded
-44	National Vulnerabilities Database (NVD)	Cybersecurity	English	wang_integrating_2021	No								Excluded
-45	Common Attack Pattern Enumeration and Classification (CAPEC)	Cybersecurity	English	wang_integrating_2021	No								Excluded
-46	Cytokine and growth factor receptor corpus (CytoRec)	Biomedicine	English	tomanek_approximating_2008	No								Excluded
-47	PBvar Corpus (derived from PennBioIE corpus),	Biomedicine	English	tomanek_approximating_2008	No								Excluded
-48	Antigens corpus (CDAntigen)	Biomedicine	English	tomanek_approximating_2008	No								Excluded
-49	Fault Disposal Plans by Grid Companies	Instructions	English	zhou_active_2023	-								Excluded
-50	IT Help&Support	Instructions	English	gao_active_2019	No								Excluded
-51	Electronic Medical Records (EMR)	Medicine	English	veerasekharreddy_named_2022	-								Excluded
-52	AI Conferences abstracts	Scientific Papers	English	li_iekm-md_2020	No								Excluded
-53	Websites & Emails Corpus	Websites & Emails	English	culotta_corrective_2006, culotta_reducing_2005	No								Excluded
-54	i2b2/UTHealth 2014 shared task (originally text classification)	Medicine	English	shelmanov_active_2019	No								Excluded
-55	Amazon Product Profiles  (dog food, detergents, camera) with different title/description/bullet attributes	Product Profiles	English	zheng_opentag_2018	No								Excluded
-56	CoNLL 2000 English	Newspaper articles	English	claveau_strategies_2018	Yes - Chunking task								Excluded
-57	Ritter	Twitter Posts	English	liu_ltp_2022	Yes - Same as WNUT2016								Excluded
-58	FlySlip	Biomedicine	English	settles_analysis_2008	Yes - But not available								Excluded
+26	CoNLL 2003 German	Newspaper articles	German	""	""			moniz_efficiently_2022				No	Excluded
+27	BioCreative V CDR (BC5CDR)	Biomedicine	English	""	""			sapci_focusing_2023, agrawal_multicore_2023, agrawal_active_2021				-	Excluded
+28	BioCreative 1A Gene mentions	Biomedicine	English	""	""			settles_analysis_2008				No	Excluded
+29	BioCreative II	Biomedicine	English	""	""			han_clustering_2016				No	Excluded
+30	BioNLP13 Cancer Genetics (CG)	Biomedicine	English	""	""			agrawal_multicore_2023				-	Excluded
+31	i2b2/VA 2010 NLP	Medicine	English	""	""			yu_adversarial_2020, linh_loss_2021, kholghi_clinical_2017, wei_cost-aware_2019, kholgi_external_2015, chen_active_2017, chen_study_2015				No	Excluded
+32	RSMeans Online	Construction (work descriptions)	English	""	""			tang_towards_2022				No	Excluded
+33	Semeval 2018 Task 8	Cybersecurity	English	""	""			li_adversarial_2021				No	Excluded
+34	ShARe/CLEF 2013	Medicine	English	""	""			linh_loss_2021, kholgi_clinical_2017, kholghi_external_2015				No	Excluded
+35	FranText Corpus	Prose	French	""	""			erdmann_practical_2019				No	Excluded
+36	Articles found on Macromolecules (Journal in Polymer Science)	Chemistry	English	""	""			tchoua_active_2019				No	Excluded
+37	ESTER-campaign	Radio broadcasts	French	""	""			claveau_strategies_2018				No	Excluded
+38	PATHOJEN corpus (MEDLINE 2011 baseline with query (Disease [MeSH Terms] AND hasabstract[All Fields])	Medicine	English	""	""			hahn_active_2012				No	Excluded
+39	PennBioIE Corpus (PubMed abstracts)	Biomedicine	English	""	""			tomanek_reducing_2009, tomanek_proper_2009				No	Excluded
+40	Message Understanding Conference (MUC7)	Newspaper articles	English	""	""			tomanek_annotation_2010, olsson_privacy_2009				No	Excluded
+41	Medical Reports from 2 institutions	Medicine	English	""	""			ni_fast_2015				No	Excluded
+42	Wall Street Journal Treebank Corpus (Section 02-23, self-annotated)	Newspaper articles	English	""	""			miller_name_2004				No	Excluded
+43	Astronomy Bootstrapping Corpus (ABC)	Radio astronomical papers	English	""	""			hachey_investigating_2005				No	Excluded
+44	National Vulnerabilities Database (NVD)	Cybersecurity	English	""	""			wang_integrating_2021				No	Excluded
+45	Common Attack Pattern Enumeration and Classification (CAPEC)	Cybersecurity	English	""	""			wang_integrating_2021				No	Excluded
+46	Cytokine and growth factor receptor corpus (CytoRec)	Biomedicine	English	""	""			tomanek_approximating_2008				No	Excluded
+47	PBvar Corpus (derived from PennBioIE corpus),	Biomedicine	English	""	""			tomanek_approximating_2008				No	Excluded
+48	Antigens corpus (CDAntigen)	Biomedicine	English	""	""			tomanek_approximating_2008				No	Excluded
+49	Fault Disposal Plans by Grid Companies	Instructions	English	""	""			zhou_active_2023				-	Excluded
+50	IT Help&Support	Instructions	English	""	""			gao_active_2019				No	Excluded
+51	Electronic Medical Records (EMR)	Medicine	English	""	""			veerasekharreddy_named_2022				-	Excluded
+52	AI Conferences abstracts	Scientific Papers	English	""	""			li_iekm-md_2020				No	Excluded
+53	Websites & Emails Corpus	Websites & Emails	English	""	""			culotta_corrective_2006, culotta_reducing_2005				No	Excluded
+54	i2b2/UTHealth 2014 shared task (originally text classification)	Medicine	English	""	""			shelmanov_active_2019				No	Excluded
+55	Amazon Product Profiles  (dog food, detergents, camera) with different title/description/bullet attributes	Product Profiles	English	""	""			zheng_opentag_2018				No	Excluded
+56	CoNLL 2000 English	Newspaper articles	English	""	""			claveau_strategies_2018				Yes - Chunking task	Excluded
+57	Ritter	Twitter Posts	English	""	""			liu_ltp_2022				Yes - Same as WNUT2016	Excluded
+58	FlySlip	Biomedicine	English	""	""			settles_analysis_2008				Yes - But not available	Excluded
