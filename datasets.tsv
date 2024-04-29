@@ -55,4 +55,4 @@ Excluded	Websites & Emails Corpus	Websites & Emails	English					culotta_correcti
 Excluded	i2b2/UTHealth 2014 shared task (originally text classification)	Medicine	English					shelmanov_active_2019				No	1
 Excluded	Amazon Product Profiles  (dog food, detergents, camera) with different title/description/bullet attributes	Product Profiles	English					zheng_opentag_2018				No	1
 Included	CoNLL 2000 English	Newspaper articles	English					claveau_strategies_2018		Chunking task, no ER task		Yes	1
-Excluded	FlySlip	Biomedicine	English					settles_analysis_2008				Yes - But not available	1
+Excluded	FlySlip	Biomedicine	English					settles_analysis_2008		Papers states public access, but dataset cannot be obtained		Yes - But not available	1
